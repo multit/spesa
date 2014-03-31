@@ -361,7 +361,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'bower-install',
-      //'concurrent:server',
+      'concurrent:server',
       'autoprefixer',
       'connect:livereload',
       'watch'
@@ -375,7 +375,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('test', [
     'clean:server',
-    //'concurrent:test',
+    //'concurrent:test',  
     'autoprefixer',
     'connect:test',
     'karma'
@@ -386,6 +386,9 @@ module.exports = function (grunt) {
     'bower-install',
     'useminPrepare',
     //'concurrent:dist',
+    'compass:dist',
+    'imagemin',
+    'svgmin',
     'autoprefixer',
     'concat',
     'ngmin',

@@ -10,15 +10,14 @@
   <h3 class="text-muted">spesa app</h3>
 </div>
 
-<div ng-controller="KillerCtrl">Test del mio nuovo Controller
-  <br />
+<div ng-controller="KillerCtrl">Test del mio Controller nuovo di zecca<br />
   <div ng-repeat="gig in listaGigs">{{ gig.title }}
   </div>
 
   <br>
 
   <div ng-controller="FactorycontrollerCtrl">
-    Prova Controller con Factory
+    Prova Controller con Factory:
     <div ng-repeat="gig in gigs"><b>{{ gig.title }}</b> {{ gig.custom_fields['Data Concerto'][0] | CustomDateFilter }}</div>
 
     </br>
