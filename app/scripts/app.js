@@ -20,4 +20,13 @@ angular.module('spesaApp', [
         redirectTo: '/'
       });
     return $locationProvider.html5Mode(!window.cordova);
-  });
+  })
+
+.controller ('appController', function($scope) {
+	$scope.prodottiDaAcquistare = {
+		lista: [
+		  { val: 'Pasta del Capitano' },
+		  { val: 'Acciughe di sorrento' }
+    ]
+  };
+});

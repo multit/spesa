@@ -1,7 +1,4 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
-
-
-
 @import 'sass-bootstrap/lib/bootstrap';
 @import 'compass/css3';
 @import "compass/css3/font-face";
@@ -11,12 +8,13 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 
 // fonts
-$font_1: 'SourceSansProRegular';
-$font_2: 'SourceSansProBold';
+//$font_1: 'SourceSansProRegular';
+//$font_2: 'SourceSansProBold';
 
-@include font-face('#{$font_1}', '../assets/fonts/SourceSansPro-Regular');
-@include font-face('#{$font_2}', '../assets/fonts/SourceSansPro-Bold', bold);
+ 
 
+@include font-face('SourceSansProRegular', font-files('SourceSansPro-Regular.ttf','SourceSansPro-Regular.woff','SourceSansPro-Regular.svg','SourceSansPro-Regular.eot'));
+@include font-face('SourceSansProBold', font-files('SourceSansPro-Bold.ttf','SourceSansPro-Bold.woff','SourceSansPro-Bold.svg','SourceSansPro-Bold.eot'));
 
 
 .browsehappy {
@@ -30,7 +28,7 @@ $font_2: 'SourceSansProBold';
 
 html, body { height: 100%; }
 
-h3 {
+h1, h2, h3 {
 font-family: "SourceSansProRegular";
 }
 
@@ -38,8 +36,13 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
   	font-family: "SourceSansProRegular";
+	  font-size:16px;
+		color:#FFFFFF;
 }
 
+a {
+	color:#FFFFFF;
+}
 .grad1
 {
    background: -webkit-radial-gradient(red,blue); /* Safari 5.1 to 6.0 */

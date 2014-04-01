@@ -1,9 +1,12 @@
 <div class="header">
-  <h3 class="text-muted">spesa app</h3>
+  <h3>spesa app</h3>
 </div>
 
-<ul class="nav nav-tabs">
+<ul class="nav nav-tabs" id="myTab">
   <li><a href="/" data-toggle="tab">Spesa</a></li>
   <li class="active"><a href="/acquisti/#" data-toggle="tab">Acquisti</a></li>
 </ul>
-Elenco delle cose da acquistare
+<div ng-repeat="prodotto in prodottiAcquistabili.lista">
+<a ng-click="aggiungiProdotto($index)">{{ prodotto.val }} <i class="fa fa-plus-square"></i></a>
+</div>
+

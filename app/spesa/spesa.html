@@ -1,11 +1,15 @@
 <div class="header">
-  <h3 class="text-muted">spesa app</h3>
+  <h3>spesa app</h3>
 </div>
 
 <ul class="nav nav-tabs" id="myTab">
   <li class="active"><a href="/" data-toggle="tab">Spesa</a></li>
   <li><a href="/acquisti/#" data-toggle="tab">Acquisti</a></li>
 </ul>
-Elenco della Spesa
+
+<div ng-repeat="prodotto in prodottiDaAcquistare.lista">
+<a ng-click="rimuoviProdotto($index)">{{ prodotto.val }} <i class="fa fa-minus-square"></i></a>
+</div>
+
 
 
