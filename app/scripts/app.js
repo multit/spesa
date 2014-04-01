@@ -6,13 +6,18 @@ angular.module('spesaApp', [
   'ngSanitize',
   'ngRoute'
 ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider,$locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'spesa/spesa.html',
+        controller: 'SpesaCtrl'
+      })
+      .when('/acquisti', {
+        templateUrl: 'acquisti/acquisti.html',
+        controller: 'AcquistiCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
+    return $locationProvider.html5Mode(!window.cordova);
   });

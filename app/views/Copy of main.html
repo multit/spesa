@@ -1,0 +1,65 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a>
+    </li>
+    <li><a ng-href="#">About</a>
+    </li>
+    <li><a ng-href="#">Contact</a>
+    </li>
+  </ul>
+  <h3 class="text-muted">spesa app</h3>
+</div>
+
+
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+  <li><a href="#profile" data-toggle="tab">Profile</a></li>
+  <li><a href="#messages" data-toggle="tab">Messages</a></li>
+  <li><a href="#settings" data-toggle="tab">Settings</a></li>
+</ul>
+
+
+
+<div ng-controller="KillerCtrl">Test del mio Controller nuovo di zecca<br />
+  <div ng-repeat="gig in listaGigs">{{ gig.title }}
+  </div>
+
+  <br>
+
+  <div ng-controller="FactorycontrollerCtrl">
+    Prova Controller con Factory:
+    <div ng-repeat="gig in gigs"><b>{{ gig.title }}</b> {{ gig.custom_fields['Data Concerto'][0] | CustomDateFilter }}</div>
+
+    </br>
+    <label for="username">Type la qualsiasi per far apparire la gig list</label>
+    <input type="text" ng-model="username" placeholder="Enter la qualsiasi" />{{appare}}
+  </div>
+
+  <div class="jumbotron">
+    <h1>'Allo, 'Allo!</h1>
+    <p class="lead">
+      <img src="images/yeoman.png" alt="I'm Yeoman">
+      <br>Always a pleasure scaffolding your apps.
+    </p>
+    <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a>
+    </p>
+  </div>
+
+  <div class="row marketing">
+    <h4>HTML5 Boilerplate</h4>
+    <p>
+      HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+    </p>
+
+    <h4>Angular</h4>
+    <p>
+      AngularJS is a toolset for building the framework most suited to your application development.
+    </p>
+
+    <h4>Karma</h4>
+    <p>Spectacular Test Runner for JavaScript.</p>
+  </div>
+
+  <div class="footer">
+    <p>♥ from the Yeoman team</p>
+  </div>
