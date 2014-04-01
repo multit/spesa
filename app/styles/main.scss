@@ -11,10 +11,22 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 }
 
 /* Space out content a bit */
+
+html, body { height: 100%; }
+
+
 body {
     padding-top: 20px;
     padding-bottom: 20px;
-    @include background-image(linear-gradient(white, #cccccc, #aaaaaa));
+/*    @include background-image(linear-gradient(white, #cccccc, #aaaaaa));    */
+}
+
+.grad1
+{
+   background: -webkit-radial-gradient(red,blue); /* Safari 5.1 to 6.0 */
+   background: -o-radial-gradient(red,purple); /* For Opera 11.6 to 12.0 */
+   background: -moz-radial-gradient(red,purple); /* For Firefox 3.6 to 15 */
+   background: radial-gradient(red,purple); /* Standard syntax (must be last) */ 
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */

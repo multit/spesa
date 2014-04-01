@@ -39,5 +39,19 @@
   },
   "scripts": {
     "test": "grunt test"
-  }
+  },
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/multit/spesa"
+  },
+  "author": "Andrea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/multit/spesa/issues"
+  },
+  "homepage": "https://github.com/multit/spesa"
 }
