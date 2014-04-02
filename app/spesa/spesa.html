@@ -7,8 +7,8 @@
   <li><a href="/acquisti/#" data-toggle="tab">Acquisti</a></li>
 </ul>
 
-<div ng-repeat="prodotto in prodottiDaAcquistare.lista">
-<a ng-click="rimuoviProdotto($index)">{{ prodotto.val }} <i class="fa fa-minus-square"></i></a>
+<div ng-repeat="prodotto in prodottiDaAcquistare">
+<a ng-click="rimuoviProdotto($index)">{{ prodotto.NAME }} <i class="fa fa-minus-square"></i></a>
 </div>
 
 

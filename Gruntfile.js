@@ -285,7 +285,7 @@ module.exports = function (grunt) {
             'views/{,*/}*.html',
             'bower_components/**/*',
             'images/{,*/}*.{webp}',
-            'fonts/*'
+            'assets/fonts/*'
           ]
         }, {
           expand: true,
@@ -361,7 +361,8 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'bower-install',
-      'concurrent:server',
+      //'concurrent:server',
+      'compass:server',
       'autoprefixer',
       'connect:livereload',
       'watch'
