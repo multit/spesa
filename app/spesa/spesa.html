@@ -8,8 +8,7 @@
 </ul>
 
 <div ng-repeat="prodotto in prodottiDaAcquistare">
-<a ng-click="rimuoviProdotto($index)">{{ prodotto.NAME }} <i class="fa fa-minus-square"></i></a>
+<button type="button" class="btn btn-warning">
+<a ng-click="rimuoviProdotto(prodotto.ID)">{{ prodotto.PRODOTTO }} <i class="fa fa-minus-square"></i></a>
+</button>
 </div>
-
-
-

@@ -4,19 +4,20 @@ angular.module('spesaApp')
   .factory('spesaFactory', function ($http) {
     // Service logic
 
-    var doRequest = function (id,task) {
+    var doRequest = function (task,method,id) {
       return $http({
-        method: 'JSONP',
-        url: 'http://127.0.0.1/spesa.php?id='+id+'&&task='+task+'&callback=JSON_CALLBACK'
+        method: method,
+        url: 'http://www.andreafiorelli.com/tmp/spesa.php?id='+id+'&&task='+task+'&callback=JSON_CALLBACK'
       });
     };
 
     // Public API here
     return {
-			elencoProdottiPHP: function (id,task) {
+			queryProdotti: function (task,method,id) {
 				if (!id) { id = '0'; }
+				if (!method) { method = 'JSONP'; }
 				if (!task) { task = 'select'; }
-				return doRequest(id,task);
+				return doRequest(task,method,id);
 			}
     };
   });

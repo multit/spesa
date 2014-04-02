@@ -1,17 +1,21 @@
 'use strict';
 
 angular.module('spesaApp')
-  .controller('AcquistiCtrl', function ($scope) {
-    $scope.prodottiAcquistabili = {
-		  lista: [
-        { val : 'Prosciuttone'},
-        { val : 'Formaggio'},
-        { val : 'Nescafe'}
-      ]
-    };
-		$scope.aggiungiProdotto = function (index) {
-      
-      $scope.prodottiDaAcquistare.lista.push($scope.prodottiAcquistabili.lista[index]);
-			console.log('Cambiato l\'elenco' + $scope.prodottiAcquistabili.lista[index]);
+  .controller('AcquistiCtrl', [ '$scope', 'spesaFactory', function ($scope,spesaFactory) {
+	
+
+	$scope.aggiungiProdotto = function (id) {
+			spesaFactory.queryProdotti('insert','GET',id).success (function () {
+				console.log('query riuscita, id: ' + id);
+			});
 		};
-  });
+
+	$scope.updateProdotti = function () {
+		spesaFactory.queryProdotti('select').success (function (data) {
+			$scope.prodottiAcquistabili = data.lista;
+		});
+	};
+		
+	$scope.updateProdotti();
+
+}]);

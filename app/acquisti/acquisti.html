@@ -6,7 +6,9 @@
   <li><a href="/" data-toggle="tab">Spesa</a></li>
   <li class="active"><a href="/acquisti/#" data-toggle="tab">Acquisti</a></li>
 </ul>
-<div ng-repeat="prodotto in prodottiAcquistabili.lista">
-<a ng-click="aggiungiProdotto($index)">{{ prodotto.val }} <i class="fa fa-plus-square"></i></a>
+<div ng-repeat="prodotto in prodottiAcquistabili">
+<button type="button" class="btn btn-warning">
+<a ng-click="aggiungiProdotto(prodotto.ID)">{{ prodotto.NAME }} <i class="fa fa-plus-square"></i></a>
+</button>
 </div>
 

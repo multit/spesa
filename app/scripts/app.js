@@ -24,21 +24,4 @@ angular.module('spesaApp', [
 		redirectTo: '/'
 	});
 	return $locationProvider.html5Mode(!window.cordova);
-})
-
-.controller ('appController', [ '$scope', 'spesaFactory', function($scope,spesaFactory) {
-
-	/*$scope.prodottiDaAcquistare = {
-		lista: [
-		  { val: 'Pasta del Capitano' },
-		  { val: 'Acciughe di sorrento' }
-		]
-	};*/
-	
-	spesaFactory.elencoProdottiPHP().success (function (data) {
-			console.log('query riuscita'+ data.lista[0].NAME);
-			$scope.prodottiDaAcquistare = data.lista;
-		});
-
-
-}]);
+});
