@@ -13,13 +13,33 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/sass-bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+	
   </head>
   <body ng-app="spesaApp" class="grad1">
+
+
+
+	<div class="header">
+ 	 <h3>spesa app</h3>	
+
+	<ul class="nav nav-tabs" id="myTab">
+	  <li class="active"><a href="/" data-toggle="tab">Spesa</a></li>
+	  <li><a href="/acquisti/#" data-toggle="tab">Acquisti</a></li>
+	</ul>
+
+	</div>
+
+
+
+	<div id="menuadd">Add</div>
+
+
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -66,7 +86,7 @@
         <script src="scripts/controllers/acquisti.js"></script>
         <script src="scripts/services/spesafactory.js"></script>
         <!-- endbuild -->
-
+	    
 
 </body>
 </html>

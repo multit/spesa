@@ -1,11 +1,3 @@
-<div class="header">
-  <h3>spesa app</h3>
-</div>
-
-<ul class="nav nav-tabs" id="myTab">
-  <li><a href="/" data-toggle="tab">Spesa</a></li>
-  <li class="active"><a href="/acquisti/#" data-toggle="tab">Acquisti</a></li>
-</ul>
 <div ng-repeat="prodotto in prodottiAcquistabili">
 <button type="button" class="btn btn-warning">
 <a ng-click="aggiungiProdotto(prodotto.ID)">{{ prodotto.NAME }} <i class="fa fa-plus-square"></i></a>

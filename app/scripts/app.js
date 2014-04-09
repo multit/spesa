@@ -25,3 +25,22 @@ angular.module('spesaApp', [
 	});
 	return $locationProvider.html5Mode(!window.cordova);
 });
+
+
+
+
+/* Jquery */
+
+$(document).ready(function () {
+	
+	console.log('jquery partito');
+
+	$('#menuadd').click(function () {
+		console.log('clicked');
+		$("#menuadd").animate({
+			height: "50%"	
+			}, 50, "linear"			
+		);
+	});
+
+});
